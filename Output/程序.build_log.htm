@@ -1,0 +1,101 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.26.2.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: - 左天, -, LIC=ATTQ1-CZ24I-30XNC-7IIZU-83HTS-X5MY2
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.26.2.0
+Toolchain Path:  D:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.26.2.0
+Dialog DLL:      DARMSTM.DLL V1.68.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.5.0
+Dialog DLL:      TARMSTM.DLL V1.66.0.0
+ 
+<h2>Project:</h2>
+F:\ 2\指纹\指纹\1 程序源文件\程序\User\程序.uvprojx
+Project File Date:  12/20/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'Target 1'
+assembling startup_stm32f10x_md.s...
+compiling core_cm3.c...
+compiling misc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_usart.c...
+compiling stm32f10x_exti.c...
+compiling stm32f10x_rtc.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_flash.c...
+compiling stm32f10x_adc.c...
+compiling gpio.c...
+..\Driver\gpio.c(91): warning:  #188-D: enumerated type mixed with another type
+       GPIO_WriteBit(GPIOA,GPIO_Pin_15,1);	//A15输出高电平
+..\Driver\gpio.c: 1 warning, 0 errors
+compiling stm32f10x_tim.c...
+compiling lcd1602.c...
+compiling rc522_config.c...
+compiling timer.c...
+compiling stmflash.c...
+compiling stm32f10x_it.c...
+compiling system_stm32f10x.c...
+compiling rc522_function.c...
+..\Driver\rc522_function.c(775): warning:  #940-D: missing return statement at end of non-void function "IC_CMT" 
+  }
+..\Driver\rc522_function.c: 1 warning, 0 errors
+compiling as608.c...
+compiling delay.c...
+compiling main.c...
+main.c(501): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+  	  if(strstr(comper_str,"FDYDZ") == NULL)  //新的单片机
+main.c(532): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  			sprintf(BUF,"%02X%02X%02X%02X", ucArray_ID [ 0 ], ucArray_ID [ 1 ], ucArray_ID [ 2 ], ucArray_ID [ 3 ] );//吧IC卡号以字符串的形式拷贝到BUF中
+main.c(562): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+  					if(strstr(ID_TEMP_Buffer,ID_BUF) != NULL ) //查找匹配正确
+main.c(562): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+  					if(strstr(ID_TEMP_Buffer,ID_BUF) != NULL ) //查找匹配正确
+main.c(594): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+  					  if(strstr(ID_TEMP_Buffer,ID_BUF) != NULL)//检测到相同ID
+main.c(594): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+  					  if(strstr(ID_TEMP_Buffer,ID_BUF) != NULL)//检测到相同ID
+main.c(603): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  				     sprintf(ID_TEMP_Buffer,"%s%d",ID_BUF,1);//把IC卡号拷贝到ID_TEMP_Buffer中，第8位存储1，说明卡号被存储
+main.c(629): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+  					  if(strstr(ID_TEMP_Buffer,ID_BUF) != NULL)              //找到IC卡号
+main.c(629): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+  					  if(strstr(ID_TEMP_Buffer,ID_BUF) != NULL)              //找到IC卡号
+main.c(636): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  						sprintf(ID_TEMP_Buffer,"%02X%02X%02X%02X%d",0,0,0,0,0);//ID_TEMP_Buffer缓存全部写入0
+main.c: 10 warnings, 0 errors
+compiling sys.c...
+compiling usart1.c...
+linking...
+Program Size: Code=12308 RO-data=328 RW-data=180 ZI-data=2740  
+FromELF: creating hex file...
+"..\Output\程序.axf" - 0 Error(s), 12 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.3.0.pack
+                Keil.STM32F1xx_DFP.2.3.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  D:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
